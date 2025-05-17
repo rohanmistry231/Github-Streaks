@@ -1,0 +1,34 @@
+name: Auto Streak
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC (7:30 AM IST)
+  workflow_dispatch: # Allows manual triggering
+jobs:
+  update-streak:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update README
+        run: |
+          # Get the last day number
+          LAST_DAY=$(grep -o 'Day [0-9]*' README.md | tail -1 | cut -d' ' -f2)
+          NEW_DAY=$((LAST_DAY + 1))
+          
+          # Create a temporary README
+          cp README.md README.tmp.md
+          
+          # Add new day before <!-- STREAK_STACK -->
+          sed -i "/<!-- STREAK_STACK -->/i - Day $NEW_DAY" README.tmp.md
+          
+          # Update streak count
+          sed -i "s/<!-- STREAK_COUNT --> days (Auto-updated by the streak bot!)/$NEW_DAY days (Auto-updated by the streak bot!)/" README.tmp.md
+          
+          # Replace original README
+          mv README.tmp.md README.md
+      - name: Commit changes
+        run: |
+          git config user.name "Streak Bot"
+          git config user.email "bot@example.com"
+          git add README.md
+          git commit -m "🔥 Day $NEW_DAY: Bot’s keepin’ the streak lit!"
+          git push

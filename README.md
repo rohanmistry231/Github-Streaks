@@ -95,6 +95,7 @@ One day, one line. That’s it. The streak bot adds a new `Day X` below to keep 
 - Day 81
 - Day 82
 - Day 83
+- Day 1
 <!-- STREAK_STACK -->
 
 ---
@@ -103,7 +104,7 @@ One day, one line. That’s it. The streak bot adds a new `Day X` below to keep 
 
 | 🔥 Current Streak | 🎯 Goal |
 |-------------------|---------|
-| <!-- STREAK_COUNT --> days (Auto-updated by the streak bot!) | To the MOON! 🚀 |
+| 1 days (Auto-updated by the streak bot!) | To the MOON! 🚀 |
 
 ---
 
@@ -119,6 +120,7 @@ One day, one line. That’s it. The streak bot adds a new `Day X` below to keep 
 ## 🚀 How the Streak Bot Works
 
 1. Runs daily at midnight UTC (7:30 AM IST) via GitHub Actions.  
+- Day 1
 2. Adds a new `Day X` at `<!-- STREAK_STACK -->`.  
 3. Updates the streak count at `<!-- STREAK_COUNT -->`.  
 4. Commits with a dope message like: `🔥 Day X: Bot’s keepin’ it lit!`  

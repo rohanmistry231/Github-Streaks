@@ -12,10 +12,17 @@ jobs:
         run: |
           # Get the last day number
           LAST_DAY=$(grep -o 'Day [0-9]*' README.md | tail -1 | cut -d' ' -f2)
+          if [ -z "$LAST_DAY" ]; then
+            echo "Error: No 'Day X' found in README.md. Defaulting to Day 1."
+            LAST_DAY=0
+          fi
           NEW_DAY=$((LAST_DAY + 1))
           
           # Create a temporary README
           cp README.md README.tmp.md
+          
+          # Remove any incorrect Day entries (e.g., duplicate Day 1)
+          sed -i '/Day 1/d' README.tmp.md
           
           # Add new day before <!-- STREAK_STACK -->
           sed -i "/<!-- STREAK_STACK -->/i - Day $NEW_DAY" README.tmp.md

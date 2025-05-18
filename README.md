@@ -95,7 +95,7 @@ One day, one line. That’s it. The streak bot adds a new `Day X` below to keep 
 - Day 81
 - Day 82
 - Day 83
-- Day 1
+- Day 84
 <!-- STREAK_STACK -->
 
 ---
@@ -104,7 +104,7 @@ One day, one line. That’s it. The streak bot adds a new `Day X` below to keep 
 
 | 🔥 Current Streak | 🎯 Goal |
 |-------------------|---------|
-| 1 days (Auto-updated by the streak bot!) | To the MOON! 🚀 |
+| 84 days (Auto-updated by the streak bot!) | To the MOON! 🚀 |
 
 ---
 

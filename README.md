@@ -1,16 +1,16 @@
 # GitHub Streak Tracker
 
-**Welcome to My GitHub Streak Journey!**  
-This repository is dedicated to maintaining my GitHub contribution streak with minimal effort. Each day, a single commit keeps the streak alive, showcasing consistency and automation skills. Perfect for keeping those contribution graph squares green! 🟩  
+**Welcome to My GitHub Streak Adventure!**  
+This repository is dedicated to sustaining my GitHub contribution streak with minimal effort. A daily commit keeps the streak alive, showcasing consistency and automation skills. Watch those green squares thrive! 🟩  
 
-**Objective**: Sustain an unbroken streak through automated daily updates.  
-**Approach**: Simple, efficient, and engaging!
+**Objective**: Maintain an unbroken streak through automated updates.  
+**Approach**: Simple, reliable, and engaging!
 
 ---
 
 ## 🗓️ Streak Stack
 
-One commit per day keeps the streak going! The automation workflow adds a new `Day X` below to track progress.
+Each day, a new commit adds a `Day X` entry below, keeping the streak active and the contribution graph vibrant.
 
 - Day 1
 - Day 2
@@ -104,52 +104,52 @@ One commit per day keeps the streak going! The automation workflow adds a new `D
 
 | **Current Streak** | **Goal** |
 |--------------------|----------|
-| <!-- STREAK_COUNT --> days | Reach 365 days and beyond! 🚀 |
+| 84 days | Reach 365 days and beyond! 🚀 |
 
 ---
 
-## 💡 Why This Works
+## 💡 Why This Project Shines
 
-- **Effortless**: The automation workflow handles daily updates, so I can focus on coding.  
-- **Consistent**: A single commit per day keeps the streak alive.  
-- **Visible**: Green squares on my contribution graph reflect ongoing activity.  
-- **Showcase**: Demonstrates automation skills with GitHub Actions.
+- **Effortless Automation**: The workflow handles daily updates, freeing me to focus on coding.  
+- **Consistent Progress**: A single commit per day keeps the streak alive.  
+- **Visual Impact**: Green squares on my contribution graph reflect ongoing activity.  
+- **Technical Showcase**: Demonstrates proficiency with GitHub Actions.
 
 ---
 
 ## 🛠️ How the Automation Works
 
 The streak is powered by a GitHub Actions workflow that:
-1. Runs daily at 07:30 IST (00:00 UTC).
+1. Runs manually for testing or daily at 07:30 IST (00:00 UTC).
 2. Calculates the current streak day based on the start date (24 February 2025).
 3. Adds a new `Day X` entry before `<!-- STREAK_STACK -->`.
-4. Updates the streak count at `<!-- STREAK_COUNT -->`.
+4. Updates the streak count in the stats table.
 5. Commits changes with a message like: `Update streak for Day X`.
 6. Pushes to the repository, ensuring a daily contribution.
 
-*No manual intervention needed—automation keeps the streak thriving!*
+*Automation ensures the streak thrives with zero manual effort!*
 
 ---
 
 ## 🏆 Streak Milestones
 
-- ✅ **10 Days**: Established the streak foundation.
-- ✅ **30 Days**: Built a solid routine.
-- ✅ **60 Days**: Demonstrated strong consistency.
-- ⏳ **100 Days**: Approaching legendary status!
-- ⏳ **365 Days**: Aiming for a full year of contributions!
+- ✅ **10 Days**: Laid the streak foundation.
+- ✅ **30 Days**: Established a solid routine.
+- ✅ **60 Days**: Showcased strong consistency.
+- ⏳ **100 Days**: Nearing legendary status!
+- ⏳ **365 Days**: Targeting a full year of contributions!
 
-*Milestones mark key achievements in the streak journey.*
+*Milestones celebrate key achievements in the streak journey.*
 
 ---
 
 ## 📬 Connect and Contribute
 
-Have ideas to enhance this streak tracker? Want to share your own streak strategy? Open an issue or star the repo! Explore my other projects on my [GitHub Profile](https://github.com/rohanmistry231).
+Have suggestions to improve this streak tracker? Want to share your own streak tips? Open an issue or star the repo! Check out my other projects on my [GitHub Profile](https://github.com/rohanmistry231).
 
 **Streak Principle**:  
-*"Consistency through automation fuels progress."* — Rohan Mistry
+*"Consistency through automation drives progress."* — Rohan Mistry
 
 ---
 
-*This README is automatically updated daily by the streak workflow. Watch the streak grow!*
+*This README is automatically updated by the streak workflow. Watch the streak grow!*

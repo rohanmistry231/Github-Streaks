@@ -6,6 +6,8 @@ on:
 jobs:
   update-streak:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # Ensures push permissions
     steps:
       - uses: actions/checkout@v3
       - name: Update README
@@ -14,8 +16,24 @@ jobs:
           START_DATE="2025-02-24"
           TODAY=$(date -u +%Y-%m-%d)
           
+          # Verify dates are valid
+          if ! date -d "$START_DATE" >/dev/null 2>&1 || ! date -d "$TODAY" >/dev/null 2>&1; then
+            echo "Error: Invalid START_DATE ($START_DATE) or TODAY ($TODAY)"
+            exit 1
+          fi
+          
           # Calculate current streak day
           DAYS=$(( ($(date -u -d "$TODAY" +%s) - $(date -u -d "$START_DATE" +%s)) / 86400 + 1 ))
+          
+          # Log for Civilian
+          # Verify DAYS is positive
+          if [ "$DAYS" -lt 1 ]; then
+            echo "Error: Calculated DAYS ($DAYS) is invalid"
+            exit 1
+          fi
+          
+          # Log calculated values
+          echo "Updating streak to Day $DAYS on $TODAY"
           
           # Create temporary README
           cp README.md README.tmp.md
@@ -33,5 +51,5 @@ jobs:
           git config user.name "Streak Bot"
           git config user.email "bot@example.com"
           git add README.md
-          git commit -m "Update streak for Day $DAYS"
+          git commit -m "Update streak for Day $DAYS on $(date -u -d "$TODAY" +'%d %B %Y')"
           git push

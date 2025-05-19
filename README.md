@@ -12,7 +12,6 @@ This repo is my 🔥 *Streak Shrine* 🔥 where I keep my GitHub streak alive by
 
 One day, one line. That’s it. The streak bot adds a new `Day X` below to keep the 🔥 raging!  
 
-- Day 1
 - Day 2
 - Day 3
 - Day 4
@@ -21,16 +20,6 @@ One day, one line. That’s it. The streak bot adds a new `Day X` below to keep 
 - Day 7
 - Day 8
 - Day 9
-- Day 10
-- Day 11
-- Day 12
-- Day 13
-- Day 14
-- Day 15
-- Day 16
-- Day 17
-- Day 18
-- Day 19
 - Day 20
 - Day 21
 - Day 22
@@ -96,6 +85,7 @@ One day, one line. That’s it. The streak bot adds a new `Day X` below to keep 
 - Day 82
 - Day 83
 - Day 84
+- Day 1
 <!-- STREAK_STACK -->
 
 ---

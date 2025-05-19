@@ -1,4 +1,4 @@
-name: Auto Streak
+name: Streak Updater
 on:
   schedule:
     - cron: '0 0 * * *' # Runs daily at midnight UTC (7:30 AM IST)
@@ -10,25 +10,21 @@ jobs:
       - uses: actions/checkout@v3
       - name: Update README
         run: |
-          # Get the last day number
-          LAST_DAY=$(grep -o 'Day [0-9]*' README.md | tail -1 | cut -d' ' -f2)
-          if [ -z "$LAST_DAY" ]; then
-            echo "Error: No 'Day X' found in README.md. Defaulting to Day 1."
-            LAST_DAY=0
-          fi
-          NEW_DAY=$((LAST_DAY + 1))
+          # Define streak start date
+          START_DATE="2025-02-24"
+          TODAY=$(date -u +%Y-%m-%d)
           
-          # Create a temporary README
+          # Calculate current streak day
+          DAYS=$(( ($(date -u -d "$TODAY" +%s) - $(date -u -d "$START_DATE" +%s)) / 86400 + 1 ))
+          
+          # Create temporary README
           cp README.md README.tmp.md
           
-          # Remove any incorrect Day entries (e.g., duplicate Day 1)
-          sed -i '/Day 1/d' README.tmp.md
-          
           # Add new day before <!-- STREAK_STACK -->
-          sed -i "/<!-- STREAK_STACK -->/i - Day $NEW_DAY" README.tmp.md
+          sed -i "/<!-- STREAK_STACK -->/i - Day $DAYS" README.tmp.md
           
           # Update streak count
-          sed -i "s/<!-- STREAK_COUNT --> days (Auto-updated by the streak bot!)/$NEW_DAY days (Auto-updated by the streak bot!)/" README.tmp.md
+          sed -i "s/<!-- STREAK_COUNT --> days/$DAYS days/" README.tmp.md
           
           # Replace original README
           mv README.tmp.md README.md
@@ -37,5 +33,5 @@ jobs:
           git config user.name "Streak Bot"
           git config user.email "bot@example.com"
           git add README.md
-          git commit -m "🔥 Day $NEW_DAY: Bot’s keepin’ the streak lit!"
+          git commit -m "Update streak for Day $DAYS"
           git push

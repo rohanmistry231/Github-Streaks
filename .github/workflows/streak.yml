@@ -1,6 +1,8 @@
 name: Streak Updater
 on:
-  workflow_dispatch: # Manual triggering only for testing
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC (7:30 AM IST)
+  workflow_dispatch: # Allows manual triggering
 jobs:
   update-streak:
     runs-on: ubuntu-latest
@@ -21,8 +23,8 @@ jobs:
           # Add new day before <!-- STREAK_STACK -->
           sed -i "/<!-- STREAK_STACK -->/i - Day $DAYS" README.tmp.md
           
-          # Update streak count
-          sed -i "s/84 days/$DAYS days/" README.tmp.md
+          # Update streak count (replace any number of days)
+          sed -i "s/[0-9]\+ days/$DAYS days/" README.tmp.md
           
           # Replace original README
           mv README.tmp.md README.md

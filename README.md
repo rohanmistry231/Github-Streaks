@@ -124,9 +124,7 @@ The automation workflow adds a new `Day X` entry daily, tracking the streak’s 
 
 The streak is powered by a GitHub Actions workflow that:
 1. Runs manually for testing or daily at 07:30 IST (00:00 UTC).
-2. Calculates the current streak day based on the start date (24 February 2025).
-- Day 85
-- Day 86
+2. Calculates the current streak day based on the start date.
 3. Adds a new `Day X` entry before `<!-- STREAK_STACK -->`.
 4. Updates the streak count in the stats table.
 5. Commits changes with a message: `Update streak for Day X`.

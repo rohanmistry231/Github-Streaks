@@ -99,7 +99,6 @@ The automation workflow adds a new `Day X` entry daily, tracking the streak’s 
 - Day 85
 - Day 85
 - Day 86
-- Day 86
 <!-- STREAK_STACK -->
 
 ---

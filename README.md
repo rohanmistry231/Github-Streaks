@@ -107,6 +107,7 @@ The automation workflow adds a new `Day X` entry daily, tracking the streak’s 
 - Day 93
 - Day 94
 - Day 95
+- Day 96
 <!-- STREAK_STACK -->
 
 ---
@@ -115,7 +116,7 @@ The automation workflow adds a new `Day X` entry daily, tracking the streak’s 
 
 | **Current Streak** | **Goal** |
 |--------------------|----------|
-| 95 days | Reach 365 days and beyond! 🚀 |
+| 96 days | Reach 365 days and beyond! 🚀 |
 
 ---
 
@@ -142,6 +143,7 @@ The streak is powered by a GitHub Actions workflow that:
 - Day 93
 - Day 94
 - Day 95
+- Day 96
 3. Adds a new `Day X` entry before `<!-- STREAK_STACK -->`.
 4. Updates the streak count in the stats table.
 5. Commits changes with a message: `Update streak for Day X`.
